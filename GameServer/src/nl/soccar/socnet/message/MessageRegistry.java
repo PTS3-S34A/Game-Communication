@@ -4,7 +4,6 @@ import io.netty.buffer.ByteBuf;
 import nl.soccar.socnet.connection.Connection;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -84,7 +83,7 @@ public final class MessageRegistry {
         if (handler == null) {
             return;
         }
-
+  
         handler.handle(session, message);
     }
 
