@@ -1,10 +1,8 @@
 package nl.soccar.socnet;
 
 import io.netty.bootstrap.Bootstrap;
-import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.io.IOException;
@@ -43,11 +41,11 @@ public final class Client extends Node {
 
             bootstrap.handler(new NetworkInitializer());
             bootstrap.attr(NetworkConstants.ATTRIBUTE_NODE, this);
-            bootstrap.connect(address).sync().channel().closeFuture().sync();
+            bootstrap.connect(address);
         } catch (Exception e) {
             throw new IOException("Failed to conect client.", e);
         } finally {
-            group.shutdownGracefully();
+            //group.shutdownGracefully();
         }
     }
 
