@@ -16,6 +16,8 @@ public final class MessageConstants {
     public static final int PLAYER_LEAVE_SESSION_MESSAGE_ID = 5;
     public static final int START_GAME_MESSAGE_ID = 6;
     public static final int PLAYER_STARTED_GAME_MESSAGE_ID = 7;
+    public static final int PLAYER_MOVED_MESSAGE_ID = 8;
+    public static final int MOVE_PLAYER_MESSAGE_ID = 9;
     
     
     private MessageConstants() {
