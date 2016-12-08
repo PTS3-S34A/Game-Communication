@@ -17,10 +17,21 @@ public final class ByteBufUtilities {
     }
     
     public static String readString(ByteBuf buf) {
-        int length = buf.readShort();
-        byte[] data = new byte[length];
+        if (buf.readableBytes() < 2) {
+            return null;
+        }
         
+        buf.markReaderIndex();
+        int length = buf.readShort();
+        
+        if (buf.readableBytes() < length) {
+            buf.resetReaderIndex();
+            return null;
+        }
+        
+        byte[] data = new byte[length];
         buf.readBytes(data, 0, length);
+        
         return new String(data);
     }
 
