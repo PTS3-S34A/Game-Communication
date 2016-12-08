@@ -20,10 +20,8 @@ public final class ByteBufUtilities {
         if (buf.readableBytes() < 2) {
             return null;
         }
-        
-        buf.markReaderIndex();
+
         int length = buf.readShort();
-        
         if (buf.readableBytes() < length) {
             buf.resetReaderIndex();
             return null;
