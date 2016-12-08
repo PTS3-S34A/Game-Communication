@@ -41,6 +41,7 @@ public final class MessageCodec extends ByteToMessageCodec<Message> {
         Node node = channel.attr(NetworkConstants.ATTRIBUTE_NODE).get();
         MessageRegistry registry = node.getMessageRegistry();
 
+        buf.markReaderIndex();
         int id = buf.readByte();
 
         Message message = registry.decode(id, session, buf);
