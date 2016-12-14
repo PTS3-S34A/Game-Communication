@@ -20,6 +20,7 @@ public final class MessageConstants {
     public static final int MOVE_PLAYER_MESSAGE_ID = 9;
     public static final int SYNC_POSITION_PLAYER_MESSAGE_ID = 10;
     public static final int CHAT_MESSAGE_ID = 11;
+    public static final int SWITCH_TEAM_MESSAGE_ID = 12;
     
     
     private MessageConstants() {
