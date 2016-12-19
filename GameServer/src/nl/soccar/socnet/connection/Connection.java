@@ -1,14 +1,11 @@
 package nl.soccar.socnet.connection;
 
 import io.netty.channel.Channel;
+import nl.soccar.socnet.NetworkConstants;
+import nl.soccar.socnet.Node;
 import nl.soccar.socnet.message.Message;
 
 import java.net.InetSocketAddress;
-import java.util.HashMap;
-import java.util.Map;
-import nl.soccar.library.Player;
-import nl.soccar.socnet.NetworkConstants;
-import nl.soccar.socnet.Node;
 
 /**
  * A Connection is a connection between two nodes (Client and Server). It
@@ -17,7 +14,6 @@ import nl.soccar.socnet.Node;
 public final class Connection {
 
     private final Channel channel;
-    private Player player;
 
     /**
      * Initializes a new Session using the given (Netty) Channel.
@@ -52,14 +48,6 @@ public final class Connection {
      */
     public Node getNode() {
         return channel.attr(NetworkConstants.ATTRIBUTE_NODE).get();
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
     }
 
     /**
