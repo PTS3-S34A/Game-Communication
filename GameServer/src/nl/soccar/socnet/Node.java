@@ -1,13 +1,11 @@
 package nl.soccar.socnet;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import nl.soccar.library.Player;
 import nl.soccar.socnet.connection.Connection;
 import nl.soccar.socnet.connection.ConnectionListener;
 import nl.soccar.socnet.message.MessageRegistry;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A node is the endpoint of an Application. It defines either a client or a
@@ -17,7 +15,6 @@ public abstract class Node {
 
     private final MessageRegistry registry = new MessageRegistry();
 
-    private final Map<Player, Connection> connections = new HashMap<>();
     private final List<ConnectionListener> listeners = new ArrayList<>();
 
     /**
@@ -28,18 +25,6 @@ public abstract class Node {
      */
     public MessageRegistry getMessageRegistry() {
         return registry;
-    }
-    
-    public final void addConnection(Player player, Connection connection) {
-        connections.put(player, connection);
-    }
-    
-    public final void removeConnection(Player player) {
-        connections.remove(player);
-    }
-    
-    public final Connection getConnectionFromPlayer(Player player) {
-        return connections.get(player);
     }
 
     public final void addListener(ConnectionListener listener) {
