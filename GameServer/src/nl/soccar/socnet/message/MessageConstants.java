@@ -22,7 +22,7 @@ public final class MessageConstants {
     public static final int CHAT_MESSAGE_ID = 11;
     public static final int SWITCH_TEAM_MESSAGE_ID = 12;
     public static final int SYNC_POSITION_BALL_MESSAGE_ID = 13;
-    
+    public static final int SPAWN_ENTITY_MESSAGE_ID = 14;
     
     private MessageConstants() {
     }
