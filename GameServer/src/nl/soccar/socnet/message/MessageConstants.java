@@ -13,7 +13,7 @@ public final class MessageConstants {
     public static final int JOIN_SESSION_MESSAGE_ID = 2;
     public static final int PLAYER_JOINED_SESSION_MESSAGE_ID = 3;
     public static final int PLAYER_LEFT_SESSION_MESSAGE_ID = 4;
-    public static final int PLAYER_LEAVE_SESSION_MESSAGE_ID = 5;
+    public static final int LEAVE_SESSION_MESSAGE_ID = 5;
     public static final int CHANGE_GAME_STATUS_MESSAGE_ID = 6;
     public static final int PLAYER_CHANGED_GAME_STATUS_MESSAGE_ID = 7;
     public static final int PLAYER_MOVED_MESSAGE_ID = 8;
