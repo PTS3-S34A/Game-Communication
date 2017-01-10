@@ -28,6 +28,7 @@ public final class MessageConstants {
     public static final int SPAWN_BALL_MESSAGE_ID = 17;
     public static final int CHANGE_HOST_MESSAGE_ID = 18;
     public static final int EVENT_MESSAGE = 19;
+    public static final int SYNC_GAME_TIME_MESSAGE_ID = 20;
 
     private MessageConstants() {
     }
