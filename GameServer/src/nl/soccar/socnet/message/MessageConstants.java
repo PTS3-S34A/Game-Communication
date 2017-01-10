@@ -27,6 +27,7 @@ public final class MessageConstants {
     public static final int SPAWN_OBSTACLE_MESSAGE_ID = 16;
     public static final int SPAWN_BALL_MESSAGE_ID = 17;
     public static final int CHANGE_HOST_MESSAGE_ID = 18;
+    public static final int EVENT_MESSAGE = 19;
 
     private MessageConstants() {
     }
